@@ -3,7 +3,7 @@ Name:		ristretto
 Version:	0.0.1
 Release:	%mkrel 1
 License:	GPL
-Group:		Desktop/Xfce
+Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
 Source0:	%{name}-%{version}.tar.bz2 
 BuildRequires:	gtk+2-devel
