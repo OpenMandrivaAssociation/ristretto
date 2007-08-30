@@ -1,6 +1,6 @@
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.0.1
+Version:	0.0.2
 Release:	%mkrel 1
 License:	GPL
 Group:		Graphics
@@ -19,7 +19,7 @@ Ristretto is a fast and lightweight picture-viewer for the
 Xfce desktop environment.
 
 %prep
-%setup -qn %{name}-%{version}-
+%setup -q
 
 %build
 %configure2_5x
@@ -53,7 +53,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS
+%doc AUTHORS README
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
