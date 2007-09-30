@@ -10,6 +10,7 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	libxfce4util-devel
 BuildRequires:	libthunar-devel
 BuildRequires:	desktop-file-utils
+BuildRequires:	libexif-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
