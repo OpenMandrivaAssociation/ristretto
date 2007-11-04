@@ -11,6 +11,7 @@ BuildRequires:	libxfce4util-devel
 BuildRequires:	libthunar-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
+BuildRequires:	libxfcegui4-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
