@@ -1,6 +1,6 @@
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.0.12
+Version:	0.0.13
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphics
@@ -55,7 +55,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS README
+%doc AUTHORS README ChangeLog
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
