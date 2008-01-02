@@ -14,6 +14,7 @@ BuildRequires:	libexif-devel
 BuildRequires:	libxfcegui4-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Ristretto is a fast and lightweight picture-viewer for the 
