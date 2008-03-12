@@ -1,11 +1,12 @@
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
 Version:	0.0.17
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
 Source0:	%{name}-%{version}.tar.bz2 
+Source1:	%{name}-import.sh
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxfce4util-devel
 BuildRequires:	libthunar-devel
@@ -36,6 +37,8 @@ desktop-file-install \
 	--add-only-show-in="XFCE" \
 	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
+install -m 755 %{SOURCE1} %{buildroot}%{_bindir}/%{name}-import.sh
+
 %find_lang %{name} --with-gnome
 
 %clean 
@@ -56,7 +59,7 @@ rm -rf %{buildroot}
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS README ChangeLog
-%{_bindir}/%{name}
+%{_bindir}/%{name}*
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/hicolor/*/apps/*.png
 %{_iconsdir}/hicolor/scalable/apps/*.svg
