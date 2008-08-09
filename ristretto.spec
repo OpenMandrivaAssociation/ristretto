@@ -1,11 +1,12 @@
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
 Version:	0.0.20
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
 Source0:	http://goodies.xfce.org/releases/ristretto/%{name}-%{version}.tar.gz
+Patch0:		%{name}-0.0.20-fix-adjustments-issue.patch
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxfce4util-devel
 BuildRequires:	libthunar-devel
@@ -22,6 +23,7 @@ Xfce desktop environment.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x
