@@ -1,12 +1,13 @@
+%define url_ver %(echo %{version} | cut -c 1-3)
+
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.0.22
-Release:	%mkrel 2
+Version:	0.0.91
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
-Source0:	http://goodies.xfce.org/releases/ristretto/%{name}-%{version}.tar.gz
-Patch0:		ristretto-0.0.22-fix-crash-on-gif-images.patch
+Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxfce4util-devel
 BuildRequires:	libthunar-devel
@@ -25,7 +26,6 @@ Xfce desktop environment.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure2_5x
@@ -41,7 +41,7 @@ desktop-file-install \
 
 %find_lang %{name} --with-gnome
 
-%clean 
+%clean
 rm -rf %{buildroot}
 
 %if %mdkversion < 200900
