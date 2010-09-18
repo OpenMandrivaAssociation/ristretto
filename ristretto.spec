@@ -10,11 +10,12 @@ URL:		http://goodies.xfce.org/projects/applications/ristretto
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	gtk+2-devel
 BuildRequires:	libxfce4util-devel
-BuildRequires:	libthunar-devel
+BuildRequires:	dbus-glib-devel
+BuildRequires:	cairo-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
 BuildRequires:	libxfcegui4-devel
-BuildRequires:	xfconf
+BuildRequires:	xfconf-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires:	xfconf
