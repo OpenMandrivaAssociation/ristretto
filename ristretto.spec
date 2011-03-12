@@ -2,8 +2,8 @@
 
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.0.91
-Release:	%mkrel 3
+Version:	0.0.93
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
@@ -14,7 +14,7 @@ BuildRequires:	dbus-glib-devel
 BuildRequires:	cairo-devel
 BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
-BuildRequires:	libxfcegui4-devel
+BuildRequires:	libxfce4ui-devel
 BuildRequires:	xfconf-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
