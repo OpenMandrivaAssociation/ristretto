@@ -16,6 +16,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	libexif-devel
 BuildRequires:	libxfce4ui-devel
 BuildRequires:	xfconf-devel
+BuildRequires:	exo-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires:	xfconf
