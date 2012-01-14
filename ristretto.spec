@@ -2,8 +2,8 @@
 
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.3.0
-Release:	%mkrel 1
+Version:	0.3.2
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
@@ -20,7 +20,6 @@ BuildRequires:	exo-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires:	xfconf
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Ristretto is a fast and lightweight picture-viewer for the 
@@ -34,7 +33,6 @@ Xfce desktop environment.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 desktop-file-install \
@@ -43,27 +41,7 @@ desktop-file-install \
 
 %find_lang %{name} --with-gnome
 
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%{update_menus}
-%{update_desktop_database}
-%{update_mime_database}
-%update_icon_cache hicolor
-%endif
-
-%if %mdkversion < 200900
-%postun
-%{clean_menus}
-%{clean_desktop_database}
-%{clean_mime_database}
-%clean_icon_cache hicolor
-%endif
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS README ChangeLog
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
