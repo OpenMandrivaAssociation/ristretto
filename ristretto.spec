@@ -2,7 +2,7 @@
 
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.3.3
+Version:	0.3.6
 Release:	1
 License:	GPLv2+
 Group:		Graphics
@@ -39,7 +39,7 @@ desktop-file-install \
 	--add-only-show-in="XFCE" \
 	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-%find_lang %{name} --with-gnome
+%find_lang %{name} --with-gnome %{name}.lang
 
 %files -f %{name}.lang
 %doc AUTHORS README ChangeLog
