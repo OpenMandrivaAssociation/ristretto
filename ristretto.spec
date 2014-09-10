@@ -3,18 +3,18 @@
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
 Version:	0.6.3
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(gtk+-2.0)
-BuildRequires:	pkgconfig(libxfce4util-1.0)
+BuildRequires:	pkgconfig(libxfce4util-1.0) >= 4.11
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(libexif)
-BuildRequires:	pkgconfig(libxfce4ui-1)
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	pkgconfig(exo-1)
 Requires(post):	desktop-file-utils
