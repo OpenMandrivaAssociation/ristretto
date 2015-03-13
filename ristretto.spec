@@ -45,6 +45,7 @@ desktop-file-install \
 %doc AUTHORS README ChangeLog
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
+%{_datadir}/appdata/ristretto.appdata.xml
 %{_iconsdir}/hicolor/*/apps/*.png
 %{_iconsdir}/hicolor/scalable/apps/*.svg
 
