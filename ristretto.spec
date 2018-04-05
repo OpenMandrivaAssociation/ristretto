@@ -1,8 +1,9 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -d. -f 1-2)
+%define _disable_rebuild_configure 1
 
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.8.0
+Version:	0.8.2
 Release:	1
 License:	GPLv2+
 Group:		Graphics

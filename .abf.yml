@@ -1,3 +1,4 @@
----
+removed_sources:
+  ristretto-0.8.0.tar.bz2: 0f780cd0b3270e258315a737e4bbf332806f14dc
 sources:
-  "ristretto-0.8.0.tar.bz2": 0f780cd0b3270e258315a737e4bbf332806f14dc
+  ristretto-0.8.2.tar.bz2: 92dc94e17c26d71430441f9127156b2ec645af63
