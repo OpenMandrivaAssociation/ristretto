@@ -40,7 +40,8 @@ Xfce desktop environment.
 
 %build
 %xdt_autogen
-%configure2_5x
+%configure
+
 %make_build
 
 %install
