@@ -3,38 +3,48 @@
 
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
-Version:	0.8.2
+Version:	0.10.0
 Release:	1
 License:	GPLv2+
 Group:		Graphics
 URL:		http://goodies.xfce.org/projects/applications/ristretto
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
-BuildRequires:	pkgconfig(gtk+-2.0)
-BuildRequires:	pkgconfig(libxfce4util-1.0) >= 4.12
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gio-2.0)
+BuildRequires:	pkgconfig(gio-unix-2.0)
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gobject-2.0)
+BuildRequires:	pkgconfig(gthread-2.0)
+BuildRequires:	pkgconfig(libxfce4util-1.0)
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(libexif)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.12
+BuildRequires:	pkgconfig(libxfce4ui-2)
 BuildRequires:	pkgconfig(libxfconf-0)
-BuildRequires:	pkgconfig(exo-1)
+BuildRequires:	xfce4-dev-tools
+BuildRequires:	pkgconfig(exo-2)
 Requires(post):	desktop-file-utils
 Requires(postun):	desktop-file-utils
 Requires:	xfconf
+Requires:	hicolor-icon-theme
+Requires:	xfconf
+Requires:	tumbler
 
 %description
 Ristretto is a fast and lightweight picture-viewer for the 
 Xfce desktop environment.
 
 %prep
-%setup -q
+%autopatch -p1
 
 %build
-%configure
-%make
+%xdt_autogen
+%configure2_5x
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 desktop-file-install \
 	--add-only-show-in="XFCE" \
@@ -46,7 +56,7 @@ desktop-file-install \
 %doc AUTHORS README ChangeLog
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/appdata/ristretto.appdata.xml
+%{_datadir}/metainfo/ristretto.appdata.xml
 %{_iconsdir}/hicolor/*/apps/*.png
 %{_iconsdir}/hicolor/scalable/apps/*.svg
 
