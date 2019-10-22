@@ -1,5 +1,5 @@
 %define url_ver %(echo %{version} | cut -d. -f 1-2)
-%define _disable_rebuild_configure 1
+#define _disable_rebuild_configure 1
 
 Summary:	A picture viewer for the Xfce desktop environment
 Name:		ristretto
