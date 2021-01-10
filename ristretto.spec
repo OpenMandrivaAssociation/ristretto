@@ -41,7 +41,7 @@ Xfce desktop environment.
 %autopatch -p1
 
 %build
-NOCONFIGURE=1 ./autogen.sh
+./autogen.sh
 %configure
 
 %make_build
