@@ -39,7 +39,6 @@ Xfce desktop environment.
 %autopatch -p1
 
 %build
-%xdt_autogen
 %configure
 
 %make_build
