@@ -20,7 +20,7 @@ BuildRequires:	pkgconfig(cairo)
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libxfce4ui-2)
-BuildRequires:	pkgconfig(libxfce4util-2.0)
+BuildRequires:	pkgconfig(libxfce4util-1.0)
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	xfce4-dev-tools
 BuildRequires:	pkgconfig(exo-2)
