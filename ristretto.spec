@@ -43,7 +43,7 @@ Xfce desktop environment.
 %build
 #NOCONFIGURE=1 
 #./autogen.sh
-#configure
+./configure
 
 %make_build
 
