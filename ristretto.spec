@@ -38,7 +38,7 @@ Ristretto is a fast and lightweight picture-viewer for the
 Xfce desktop environment.
 
 %prep
-%autopatch -p1
+%autosetup -p1
 
 %build
 NOCONFIGURE=1 ./autogen.sh
@@ -59,7 +59,7 @@ desktop-file-install \
 %doc AUTHORS README* ChangeLog
 %{_bindir}/%{name}
 %{_datadir}/applications/*.desktop
-%{_datadir}/metainfo/ristretto.appdata.xml
+%{_datadir}/metainfo/org.xfce.ristretto.appdata.xml
 %{_iconsdir}/hicolor/*/apps/*.png
 %{_iconsdir}/hicolor/scalable/apps/*.svg
 
