@@ -7,7 +7,7 @@ Version:	0.13.2
 Release:	1
 License:	GPLv2+
 Group:		Graphics
-URL:		http://goodies.xfce.org/projects/applications/ristretto
+URL:		https://goodies.xfce.org/projects/applications/ristretto
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	intltool
