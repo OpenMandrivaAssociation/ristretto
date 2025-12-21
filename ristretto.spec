@@ -10,6 +10,11 @@ Group:		Graphics
 URL:		https://goodies.xfce.org/projects/applications/ristretto
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(gio-2.0)
